@@ -1,3 +1,3 @@
 # Final-Year-project
 Framework -->
-algorithms -->
+algorithms --> Random Forest, Bayesian
