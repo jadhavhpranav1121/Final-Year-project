@@ -13,7 +13,7 @@ class Blockchain:
 
     def __init__(self):
         self.chain = []
-        self.transactions = []
+        self.data = []
         self.create_block(nonce = 1, previous_hash = '0')
         self.nodes = set()
 
@@ -22,8 +22,8 @@ class Blockchain:
                  'timestamp': str(datetime.datetime.now()),
                  'nonce': nonce,
                  'previous_hash': previous_hash,
-                 'transactions': self.transactions}
-        self.transactions = []
+                 'data': self.data}
+        self.data = []
         self.chain.append(block)
         return block
 
@@ -61,13 +61,32 @@ class Blockchain:
             block_index += 1
         return True
 
-    def add_transaction(self, sender, receiver, amount, time):
-        self.transactions.append({'sender': sender,
-                                  'receiver': receiver,
-                                  'amount': amount,
+    def add_transaction(self, id, name, dob, nationality,location,financial_status,crime_scale):
+        flag=False
+        
+        for i in range(int(1),int(len(blockchain.chain))):
+            d=blockchain.chain[i]['data']
+            print(len(d))
+            if(int(len(d))>0 and d[0]['name']==name):
+                flag=True
+                d[len(d)-1]['crime_list'].append(crime_scale)
+                return -1
+                
+        if(flag==False):
+            self.data.append({'id': id,
+                                  'name': name,
+                                  'dob': dob,
+                                  "nationality":nationality,
+                                  "location":location,
+                                  "financial_status":financial_status,
+                                  "crime_list":[crime_scale],
                                   'time': str(datetime.datetime.now())})
+        
         previous_block = self.get_last_block()
-        return previous_block['index'] + 1
+        if(flag==False):
+            return previous_block['index'] + 1
+        else:
+            return -1
 
     def add_node(self, address):
         parsed_url = urlparse(address)
@@ -101,19 +120,25 @@ root_node = 'e36f0158f0aed45b3bc755dc52ed4560d'
 # Mining a new block
 def mine_block(request):
     if request.method == 'GET':
-        previous_block = blockchain.get_last_block()
-        previous_nonce = previous_block['nonce']
-        nonce = blockchain.proof_of_work(previous_nonce)
-        previous_hash = blockchain.hash(previous_block)
-        blockchain.add_transaction(sender = root_node, receiver = node_address, amount = 1.15, time=str(datetime.datetime.now()))
-        block = blockchain.create_block(nonce, previous_hash)
-        response = {'message': 'Congratulations, you just mined a block!',
+        received_json = json.loads(request.body)
+        a=blockchain.add_transaction( id=received_json['id'], name=received_json['name'], dob=received_json['dob'], nationality=received_json['nationality'],location=received_json['location'],financial_status=received_json['financial_status'],crime_scale=received_json['crime_scale'])
+        if(a!=-1):
+            print("yes")
+            previous_block = blockchain.get_last_block()
+            previous_nonce = previous_block['nonce']
+            nonce = blockchain.proof_of_work(previous_nonce)
+            previous_hash = blockchain.hash(previous_block)
+            block = blockchain.create_block(nonce, previous_hash)
+            response = {'message': 'Congratulations, you just mined a block!',
                     'index': block['index'],
                     'timestamp': block['timestamp'],
                     'nonce': block['nonce'],
                     'previous_hash': block['previous_hash'],
-                    'transactions': block['transactions']}
-    return JsonResponse(response)
+                    'data': block['data']}
+            return JsonResponse(response)
+        else:
+            response={}
+            return JsonResponse(response)
 
 # Getting the full Blockchain
 def get_chain(request):
@@ -136,11 +161,14 @@ def is_valid(request):
 @csrf_exempt
 def add_transaction(request):
     if request.method == 'POST':
+        print("Yes")
         received_json = json.loads(request.body)
+        print(received_json)
         transaction_keys = ['sender', 'receiver', 'amount','time']
         if not all(key in received_json for key in transaction_keys):
             return 'Some elements of the transaction are missing', HttpResponse(status=400)
-        index = blockchain.add_transaction(received_json['sender'], received_json['receiver'], received_json['amount'],received_json['time'])
+        
+        index = blockchain.add_transaction(received_json['id'], received_json['name'], received_json['dob'],received_json['nationality'],received_json['location'],received_json['financial_status'],received_json['crime_list'],received_json['time'])
         response = {'message': f'This transaction will be added to Block {index}'}
     return JsonResponse(response)
 
