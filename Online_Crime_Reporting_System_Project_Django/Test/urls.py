@@ -13,7 +13,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('complaints/', include(('complaints.urls', 'complaints'), namespace='complaints')),
-    # path('blockchain/', include(('blockchain.urls', 'blockchain'), namespace='blockchain')),
      url('^get_chain$', views.get_chain, name="get_chain"),
     url('^mine_block$', views.mine_block, name="mine_block"),
     url('^add_transaction$', views.add_transaction, name="add_transaction"),
