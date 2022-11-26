@@ -3,14 +3,14 @@ from Block import Block
 class Blockchain:
     def __init__(self):
         self.chain = []
-        self.chain.append(Block.genesis())
+        self.chain.append(Block.genesis())  
 
     def get_block(self, index):
         return self.chain[index]
 
     def add_block(self, new_block):
         mined_block = Block.mine(new_block, self.chain[len(self.chain)-1])
-        self.chain.append(mined_block)
+        self.chain.append(mined_block) 
 
     def get_length(self):
         return len(self.chain)
