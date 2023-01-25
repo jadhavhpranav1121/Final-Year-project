@@ -28,11 +28,13 @@ class RegisterComplaint(SuccessMessageMixin, CreateView):
 
 class ListComplaints(ListView):
     model = Complaint
+    print(model)
     template_name = 'complaints/all_complaints.html'
 
 
 class DetailComplaints(DetailView):
     model = Complaint
+    print(model)
     template_name = 'complaints/complaints_detail.html'
 
     def update_seen_by(self):
@@ -44,6 +46,7 @@ class DetailComplaints(DetailView):
 
 class ComplaintView(viewsets.ModelViewSet):
     queryset = Complaint.objects.all()
+    print(queryset)
     serializer_class = ComplaintSerializer
 
     permission_classes = (permissions.AllowAny,)
@@ -54,7 +57,6 @@ class ComplaintView(viewsets.ModelViewSet):
 
 class ComplaintList(generics.ListAPIView):
     serializer_class = ComplaintSerializer
-
 
     def get_queryset(self):
         user = self.request.user

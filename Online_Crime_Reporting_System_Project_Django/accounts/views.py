@@ -14,7 +14,7 @@ from django.contrib import messages
 class Register(FormView):
     form_class = RegisterForm
     template_name = 'accounts/register.html'
-
+    
     def form_valid(self, form):
         form.save()
         return HttpResponseRedirect(reverse('accounts:dashboard'))
