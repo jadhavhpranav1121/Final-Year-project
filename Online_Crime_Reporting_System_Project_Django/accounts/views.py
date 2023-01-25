@@ -35,7 +35,7 @@ def user_login(request):
                 return HttpResponseRedirect(reverse('home'))
 
             else:
-                return HttpResponse('<h2> Account Not Active </h2>')
+                return HttpResponse('<h2> Accont Not Active </h2>')
 
         else:
             print('Someone tried to login failed on our site.')
