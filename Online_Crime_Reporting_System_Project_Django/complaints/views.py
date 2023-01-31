@@ -20,21 +20,18 @@ class RegisterComplaint(SuccessMessageMixin, CreateView):
         form.instance.seen_by = None
         form.save()
 
-        messages.success(self.request,
-                         'Your complaint was registered successfully, one of our correspondents would soon get back to you')
+        messages.success(self.request,'Your complaint was registered successfully, one of our correspondents would soon get back to you')
 
         return HttpResponseRedirect(reverse('accounts:dashboard'))
 
 
 class ListComplaints(ListView):
     model = Complaint
-    print(model)
     template_name = 'complaints/all_complaints.html'
 
 
 class DetailComplaints(DetailView):
     model = Complaint
-    print(model)
     template_name = 'complaints/complaints_detail.html'
 
     def update_seen_by(self):

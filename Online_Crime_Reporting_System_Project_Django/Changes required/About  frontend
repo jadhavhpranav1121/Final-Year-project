@@ -1,1 +1,14 @@
-if invalid login then, we should be 
+1. Home page 
+2. if invalid login then, we should be show errors
+3. Registeration form should show why registeration is not working
+4. create function for registration form
+5. blockchain should be stored in localstorage
+6. change complanits to crime details
+7. change scheme of complaints
+8. attributes of complaints like murder and robbery
+9. where should be forecasting tab
+10. 
+
+Completed -->
+1. when click on register and when there is error  then redirect to httpsresonse we have to 
+show them like error message or alert
