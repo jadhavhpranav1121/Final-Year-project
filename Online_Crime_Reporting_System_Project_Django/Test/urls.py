@@ -19,6 +19,6 @@ urlpatterns = [
     re_path('^is_valid$', views.is_valid, name="is_valid"),
     re_path('^connect_node$', views.connect_node, name="connect_node"),
     re_path('^replace_chain$', views.replace_chain, name="replace_chain"),
-]	
+]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
