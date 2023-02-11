@@ -9,7 +9,7 @@ from django.contrib import admin
 from blockchain.views import *  
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='base.html'), name='home'),
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('admin/', admin.site.urls),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('complaints/', include(('complaints.urls', 'complaints'), namespace='complaints')),
