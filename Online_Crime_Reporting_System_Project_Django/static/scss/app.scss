@@ -331,7 +331,13 @@ h6,
 .z-index {
     z-index: 999;
 }
-
+.header__logo{
+    a{
+        img{
+            width:100px;
+        }   
+    }
+}
 #wrapper {
     width: $w100;
     height: $w100;
@@ -688,9 +694,9 @@ input[type="color"]::placeholder {
 	margin             : -30px 0 0 -30px;
 	background: #ffffff;
 	border-radius: 50%;
-	background-image   : url('./../../static/images/logo/preload.png');
-	background-repeat  : no-repeat;
-	background-position: center center;
+	background-image   : url('./../../static/images/logo/preload1.png');
+	// background-repeat  : no-repeat;
+	// background-position: center center;
 	animation: 
 	preload 1s linear infinite alternate;
 	-webkit-animation-name:bounceIn; 
@@ -6923,6 +6929,7 @@ input[type="color"]::placeholder {
     padding: 212px 0 267px;
     .header__logo {
         margin-bottom: 26px;
+        
     }
     .sub-heading {
         margin-bottom: 40px;
