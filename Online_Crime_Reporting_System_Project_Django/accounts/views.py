@@ -65,11 +65,6 @@ class Dashboard(LoginRequiredMixin, View):
         return render(request, self.template_name, {'object': user_object})
 
 
-
-
-
-
-
-
-
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
 
