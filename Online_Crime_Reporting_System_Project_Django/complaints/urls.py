@@ -14,3 +14,4 @@ urlpatterns = [
     path('detail/<int:pk>', views.DetailComplaints.as_view(), name='detail_complain'),
     path('', views.ListComplaints.as_view(), name='all_complain'),
 ]
+handler404 = "accounts.views.page_not_found_view"

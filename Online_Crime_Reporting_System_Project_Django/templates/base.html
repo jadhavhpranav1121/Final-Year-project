@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="../../static/font/font-awesome.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Favicon and Touch Icons  -->
-  <link rel="shortcut icon" href="../../static/images/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" href="../../static/images/favicon.ico">
+  <link rel="shortcut icon" href=".././../../static/images/logo/preload2.png">
+  <link rel="apple-touch-icon-precomposed" href=".././../../static/images/logo/preload2.png">
 </head>
 <body>
 
@@ -67,7 +67,14 @@
     <section class="page-title">
        
     </section>
-
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
     <section class="tf-section tf-contact  d-flex flex-column align-items-center justify-content-center" style="background:#141A31; padding:0px 0px 300px 0;">
  
       <div class="col-xl-4 col-lg-4 col-md-12 box-text corner-box active" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" style="border: 2px solid #14C2A3;padding: 30px;">

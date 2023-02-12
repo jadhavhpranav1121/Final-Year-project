@@ -5,7 +5,7 @@ from django.urls import reverse
 from . models import User
 from django.views.generic import CreateView, UpdateView, FormView, DetailView, View
 from . forms import RegisterForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -14,7 +14,7 @@ from django.contrib import messages
 class Register(FormView):
     form_class = RegisterForm
     template_name = 'accounts/register.html'
-    print("sdf")
+
     def form_valid(self, form):
         print("valid",form)
         
@@ -40,11 +40,11 @@ def user_login(request):
                 return HttpResponse('<h2> Accont Not Active </h2>')
 
         else:
-            print('Someone tried to login failed on our site.')
-            return HttpResponse('<h2>Invalid login credentials applied </h2>')
+            # print('Someone tried to login failed on our site.')
+            messages.error(request,"Bad credentials")
+            
 
-    else:
-        return render(request, 'accounts/login.html', {})
+    return render(request, 'accounts/login.html', {})
 
 
 class AccountSettings(LoginRequiredMixin, SuccessMessageMixin, UpdateView):

@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../../static/font/font-awesome.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="../static/images/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="../static/images/favicon.ico">
+    <link rel="shortcut icon" href="./../../static/images/logo/preload2.png">
+    <link rel="apple-touch-icon-precomposed" href="./../../static/images/logo/preload2.png">
 {% endblock %}
 
 {% block content %}
@@ -20,14 +20,22 @@
     {% if error_message %}
         <p>{{ error_message }}</p>
     {% endif %}
+    
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
 
    <div class="w-50 mx-auto my-3">
-   <h4 class="text-center mx-auto my-3">User Login</h4>
         <form method="post" action="{% url 'accounts:login' %}">
               {% csrf_token %}
 
               <div class="form-group">
-                  <label for="username">Username:</label>
+                  <label for="username">Username:1</label>
                   <input class="form-control" type="text" name="username" placeholder="Username">
               </div>
 
@@ -38,7 +46,6 @@
 
               <div class="container text-center">
                   <input type="submit" class="btn btn-danger col-md-4" name="" value="Login">
-
               </div>
 
         </form>
