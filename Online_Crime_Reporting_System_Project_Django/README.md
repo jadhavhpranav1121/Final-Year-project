@@ -3,3 +3,6 @@ An online complaint registration system for the crime related incidents that hap
 
 
 ## Clone the repository
+
+## Open terminal and go to project directory
+
