@@ -1,21 +1,14 @@
-1.  Home page 
-2.  if invalid login then, we should be show errors
-3.  Registeration form should show why registeration is not working
-4.  create function for registration form
-5.  blockchain should be stored in localstorage
-6.  change complaints to crime details
-7.  change scheme of complaints
-8.  attributes of complaints like murder and robbery
-9.  Where should be forecasting tab
-10. json to csv add in django
-11. blockchain parameter changes with anushka scheme
-12. api through check forecasting of crimes for one for use case and one for police
-13. check and create docs for blockchain
-14. restrict api
-15. Blockchain Folder check --
-16. remove registration button
-17. add Distributed and decentralised
-
-Completed -->
-1. when click on register and when there is error  then redirect to httpsresonse we have to 
-2. show them like error message or alert
+1.  create function for registration form
+2.  blockchain should be stored in localstorage
+3.  change complaints to crime details
+4.  change scheme of complaints
+5.  attributes of complaints like murder and robbery
+6.  Where should be forecasting tab
+7.  json to csv add in django
+8.  blockchain parameter changes with anushka scheme
+9.  api through check forecasting of crimes for one for use case and one for police
+10. check and create docs for blockchain
+11. restrict api
+12. Blockchain Folder check --
+13. remove registration button
+14. add Distributed and decentralised
