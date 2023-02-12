@@ -20,7 +20,7 @@ urlpatterns = [
     # path('about2/', TemplateView.as_view(template_name='about2.html'), name='about1'),
     # path('comingsoon/', TemplateView.as_view(template_name='coming-soon.html'), name='commingsoon'),
 
-    path('ourteam/', TemplateView.as_view(template_name='team-details.html'), name='ourteam'),
+    path('our-team/', TemplateView.as_view(template_name='team-details.html'), name='ourteam'),
     path('community/', TemplateView.as_view(template_name='community.html'), name='community'),
     path('faq/', TemplateView.as_view(template_name='faq.html'), name='faq'),
     path('blog/', TemplateView.as_view(template_name='blog.html'), name='blog'),
