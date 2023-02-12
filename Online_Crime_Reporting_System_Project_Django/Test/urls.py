@@ -10,7 +10,7 @@ from blockchain.views import *
 from django.conf.urls import handler404, handler500, handler403, handler400
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('home/', TemplateView.as_view(template_name='index.html'), name='home'),
     path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
     path('404/', TemplateView.as_view(template_name='404.html'), name='404'),
    
@@ -23,7 +23,7 @@ urlpatterns = [
     path('ourteam/', TemplateView.as_view(template_name='team-details.html'), name='ourteam'),
     path('community/', TemplateView.as_view(template_name='community.html'), name='community'),
     path('faq/', TemplateView.as_view(template_name='faq.html'), name='faq'),
-    path('blog/', TemplateView.as_view(template_name='blog-grid.html'), name='blog'),
+    path('blog/', TemplateView.as_view(template_name='blog.html'), name='blog'),
     path('blogdetail/', TemplateView.as_view(template_name='blog-details.html'), name='blog-details'),
     
     path('admin/', admin.site.urls),

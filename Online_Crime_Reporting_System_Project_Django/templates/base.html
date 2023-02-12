@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="../../static/font/font-awesome.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Favicon and Touch Icons  -->
-  <link rel="shortcut icon" href="../../static/images/favicon.png">
-  <link rel="apple-touch-icon-precomposed" href="../../static/images/favicon.png">
+  <link rel="shortcut icon" href="../../static/images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="../../static/images/favicon.ico">
 </head>
 <body>
 
@@ -34,38 +34,30 @@
         <div class="container">
             <div id="site-header-inner">
                 <div class="header__logo">
-                    <a href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+                    <a href="index.html"><img src="../../static/images/final2.png" alt=""></a>
                 </div>
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
                         <li class="menu-item current-menu-item">
-                            <a href="#">Home</a>
+                            <a href="/home">Home</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">About</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="about.html">About 1</a></li>
-                                <li class="menu-item"><a href="about2.html">About 2</a></li>
-                                <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
-                                <li class="menu-item"><a href="community.html">Community</a></li>
-                                <li class="menu-item"><a href="faq.html">Faq</a></li>
-                                <li class="menu-item"><a href="404.html">404</a></li>
-                            </ul>
+                        <li class="menu-item ">
+                            <a href="/ourteam">About</a>
                         </li>
-                      
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Blog</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="blog-grid.html">Blog Grid</a></li>
-                                <li class="menu-item"><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
+                        <li class="menu-item">
+                            <a href="/blog">Blog</a>
                         </li>
-                        <li class="menu-item current-menu-item">
-                            <a href="contact.html">Contact</a>
+                        <li class="menu-item">
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
+                    
                 </nav><!-- /#main-nav -->
-               
+                <div style="float:right;">
+                    <!-- <a href="">Login</a> -->
+                    <a href="/accounts/login/" class="tf-button btn-effect" type="submit"><span class="boder-fade"></span><span class="effect">Login</span></a>
+                </div>
+                
                 <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
             </div>
         </div>
@@ -73,39 +65,23 @@
     <!-- end Header -->
 
     <section class="page-title">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                        <div class="breadcrumbs" data-aos="zoom-in" data-aos-duration="800">
-                            <h3>Login</h3>
-                        </div>            
-                </div>
-            </div>
-        </div>
+       
     </section>
 
-    <section class="tf-section tf-contact d-flex justify-content-center" style="background:#141A31; padding:0px 0px 300px 0;">
-      <div class="col-xl-4 col-lg-4 col-md-12 " data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" >
-        <!-- <form action="contact/contact-process.php" class="form-contact d-flex flex-column justify-content-center" id="contactform" data-aos="fade-right" data-aos-duration="800">
-          <fieldset>
-              <input type="text" name="name" id="name" placeholder="Name">
-          </fieldset>
-          <fieldset>
-              <input type="email" name="mail" id="mail" placeholder="Email Address">
-          </fieldset>
-          
-          <button class="tf-button btn-effect"  type="submit"><span class="boder-fade"></span><span class="effect">Login</span></button>
-      </form> -->
-      <form method="post" action="{% url 'accounts:login' %}" class="form-contact d-flex flex-column justify-content-center">
+    <section class="tf-section tf-contact  d-flex flex-column align-items-center justify-content-center" style="background:#141A31; padding:0px 0px 300px 0;">
+ 
+      <div class="col-xl-4 col-lg-4 col-md-12 box-text corner-box active" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" style="border: 2px solid #14C2A3;padding: 30px;">
+        <h3>Login</h3>
+      <form method="post" action="{% url 'accounts:login' %}" class="form-contact  d-flex flex-column justify-content-center">
         {% csrf_token %}
 
         <fieldset>
           <label for="username">Username:</label>
-          <input class="form-control" type="text" name="username">
+          <input class="form-control" style="padding-left:15px !important;" type="text" name="username">
       </fieldset>
       <fieldset>
         <label for="password">Password</label>
-        <input class="form-control" type="password" name="password">
+        <input class="form-control" style="padding-left:15px !important;" type="password" name="password">
           
       </fieldset>
       
@@ -135,7 +111,7 @@
                             <a href="#">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="contact/">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -151,12 +127,6 @@
     <script src="../../static/js/jquery.easing.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../../static/js/jquery-validate.js"></script>
-</body>
-<script src="../../static/js/jquery.min.js"></script>
-<script src="../../static/js/app.js"></script>
-<script src="../../static/js/jquery.easing.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="../../static/js/jquery-validate.js"></script>
 </body>
 </html>
 

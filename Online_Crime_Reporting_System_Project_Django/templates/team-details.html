@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load sass_tags %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrimeChain NFT Collections HTML Template</title>
-    <link rel="stylesheet" href="../static//bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../static//swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../static//dist/app.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/swiper/swiper-bundle.min.css">
+    <link href="{% sass_src 'scss/app.scss' %}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../static//font/font-awesome.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="../static//images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="../static//images/favicon.png">
+    <link rel="shortcut icon" href="../static//images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../static//images/favicon.ico">
 </head>
 <body class="header-fixed inner-page pg-team-detail">
         <!-- preloade -->
@@ -22,60 +23,38 @@
         <!-- /preload -->
     <div id="wrapper">
         <!-- Header -->
-    <header id="header_main" class="header">
-        <div class="container">
-            <div id="site-header-inner">
-                <div class="header__logo">
-                    <!-- <a href="index.html"><img src="../static//images/logo/logo.png" alt=""></a> -->
+        <header id="header_main" class="header">
+            <div class="container">
+                <div id="site-header-inner">
+                    <div class="header__logo">
+                        <a href="index.html"><img src="../static/images/final2.png" alt=""></a>
+                    </div>
+                    <nav id="main-nav" class="main-nav">
+                        <ul id="menu-primary-menu" class="menu">
+                            <li class="menu-item ">
+                                <a href="/home">Home</a>
+                            </li>
+                            <li class="menu-item current-menu-item">
+                                <a href="/ourteam">Our Team</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/blog">Blog</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                        
+                    </nav><!-- /#main-nav -->
+                    <div >
+                        <!-- <a href="">Login</a> -->
+                        <a href="/accounts/login/" class="tf-button btn-effect" type="submit"><span class="boder-fade"></span><span class="effect">Login</span></a>
+                    </div>
+                    
+                    <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
                 </div>
-                <nav id="main-nav" class="main-nav">
-                    <ul id="menu-primary-menu" class="menu">
-                        <li class="menu-item current-menu-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children current-menu-item">
-                            <a href="#">About</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="about.html">About 1</a></li>
-                                <li class="menu-item"><a href="about2.html">About 2</a></li>
-                                <li class="menu-item current-item"><a href="team-details.html">OUR TEAM</a></li>
-                                <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
-                                <li class="menu-item"><a href="community.html">Community</a></li>
-                                <li class="menu-item"><a href="faq.html">Faq</a></li>
-                                <li class="menu-item"><a href="404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Road Map </a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="roadmap.html">Road Map 1</a></li>
-                                <li class="menu-item"><a href="roadmap2.html">Road Map 2</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">NFT</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="item.html">NFT Item</a></li>
-                                <li class="menu-item"><a href="item-details.html">NFT Item Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Blog</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="blog-grid.html">Blog Grid</a></li>
-                                <li class="menu-item"><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav><!-- /#main-nav -->
-                
-                <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
             </div>
-        </div>
-    </header>
+        </header>
     <!-- end Header -->
 
     <section class="page-title">
@@ -317,7 +296,7 @@
                             <a href="#">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="contact/">Contact Us</a>
                         </li>
                     </ul>
                 </div>

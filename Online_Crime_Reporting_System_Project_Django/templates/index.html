@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../static/font/font-awesome.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="../static/images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="../static/images/favicon.png">
+    <link rel="shortcut icon" href="../static/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../static/images/favicon.ico">
 </head> 
 <body class="header-fixed main home3">
         <!-- preloade -->
@@ -33,36 +33,25 @@
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
                         <li class="menu-item current-menu-item">
-                            <a href="#">Home</a>
+                            <a href="/home">Home</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">About</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="/about/">About 1</a></li>
-                                <li class="menu-item"><a href="/about2/">About 2</a></li>
-                                <li class="menu-item"><a href="/ourteam/">OUR TEAM</a></li>
-                                <li class="menu-item"><a href="/comingsoon/">Coming Soon</a></li>
-                                <li class="menu-item"><a href="/community/">Community</a></li>
-                                <li class="menu-item"><a href="/faq/">Faq</a></li>
-                                <li class="menu-item"><a href="/404/">404</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Blog</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="blog-grid.html">Blog Grid</a></li>
-                                <li class="menu-item"><a href="blog-details.html">Blog Detail</a></li>
-                            </ul>
+                        <li class="menu-item ">
+                            <a href="/ourteam">About</a>
                         </li>
                         <li class="menu-item">
-                            <a href="contact.html">Contact</a>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                     
                 </nav><!-- /#main-nav -->
-                <ul>
-                    <li><a href="/accounts/login/">Login</a></li>
-                </ul>
+                <div style="float:right;">
+                    <!-- <a href="">Login</a> -->
+                    <a href="/accounts/login/" class="tf-button btn-effect" type="submit"><span class="boder-fade"></span><span class="effect">Login</span></a>
+                </div>
+                
                 <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
             </div>
         </div>
@@ -83,6 +72,7 @@
                                             <h2 class="title">CrimeChain nft collectionS for everyone</h2>
 
                                         </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -90,65 +80,11 @@
                         
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slider-st1">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="box-slider">
-                                        <div class="content-box">
-                                            <h1 class="title">CrimeChain nft collectionS for everyone</h1>
-                                            <p class="sub-title">Nulla ornare sagittis placerat nunc sit tempus enim. 
-                                                Accumsan pellentesque ipsum felis tristique at proin vel turpis.</p>
-                                            <div class="wrap-btn">
-                                                <a href="#" class="tf-button-st2 btn-effect" data-toggle="modal" data-target="#popup_bid"><span class="effect">connect wallet</span></a>
-                                                <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="tf-button btn-effect popup-youtube">
-                                                    <span class="boder-fade"></span>                                     
-                                                    <span class="effect">watch video</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="image">
-                                            <img src="../static/images/common/itemslider.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-st2">
-                        <div class="overlay"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="box-slider">
-                                        <div class="content-box">
-                                            <h1 class="title">CrimeChain nft collectionS for everyone</h1>
-                                            <p class="sub-title">Nulla ornare sagittis placerat nunc sit tempus enim. 
-                                                Accumsan pellentesque ipsum felis tristique at proin vel turpis.</p>
-                                                <div class="wrap-btn style2">
-                                                    <a href="#" class="tf-button-st2 btn-effect" data-toggle="modal" data-target="#popup_bid"><span class="effect">connect wallet</span></a>
-                                                    <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="tf-button btn-effect popup-youtube">
-                                                        <span class="boder-fade"></span>                                     
-                                                        <span class="effect">watch video</span>
-                                                    </a>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
-            <div class="btn-next-main"><i class="far fa-angle-right"></i></div>
+            <!-- <div class="btn-next-main"><i class="far fa-angle-right"></i></div>
             <div class="btn-prev-main"><i class="far fa-angle-left"></i></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div> -->
         </div>
     </section>
     <section class="tf-section tf-about">
@@ -188,123 +124,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section class="tf-section tf-roadmap parallax style2">
-        <div class="overlay"></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="tf-title m-b40" data-aos="fade-up" data-aos-duration="800">
-                        <p class="h8 sub-title">ROADMAP</p>
-                        <h4 class="title">CrimeChain Timeline</h4>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="roadmap style2 style3" data-aos="fade-up" data-aos-duration="1200">
-                        <div class="swiper-container swiper sl-roadmap2 btn-style">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="box">
-                                        <div class="rm-box style">
-                                            <div class="corner-box">
-                                                <h5>Q3 2021</h5>
-                                                <ul>
-                                                    <li>Aenean tempor</li>
-                                                    <li>Fusce arcu maecenas</li>
-                                                    <li>Malesuada felis sem elementum</li>
-                                                    <li>Risus eu metus</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="box active">
-                                        <div class="rm-box style">
-                                            <div class="corner-box active">
-                                                <h5>Q4 2021</h5>
-                                                <ul>
-                                                    <li>Aenean tempor</li>
-                                                    <li>Fusce arcu maecenas</li>
-                                                    <li>Malesuada felis sem elementum</li>
-                                                    <li>Risus eu metus</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="box style">
-                                        <div class="rm-box style">
-                                            <div class="corner-box">
-                                                <h5>Q1 2022</h5>
-                                                <ul>
-                                                    <li>Release website and logo</li>
-                                                    <li>Grow community</li>
-                                                    <li>Launch the project</li>
-                                                    <li>Social media setup</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="box style">
-                                        <div class="rm-box style">
-                                            <div class="corner-box">
-                                                <h5>Q2 2022</h5>
-                                                <ul>
-                                                    <li>Release website and logo</li>
-                                                    <li>Grow community</li>
-                                                    <li>Launch the project</li>
-                                                    <li>Social media setup</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="box">
-                                        <div class="rm-box style">
-                                            <div class="corner-box">
-                                                <h5>Q2 2022</h5>
-                                                <ul>
-                                                    <li>Aenean tempor</li>
-                                                    <li>Fusce arcu maecenas</li>
-                                                    <li>Malesuada felis sem elementum</li>
-                                                    <li>Risus eu metus</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="box">
-                                        <div class="rm-box style">
-                                            <div class="corner-box">
-                                                <h5>Q4 2022</h5>
-                                                <ul>
-                                                    <li>Aenean tempor</li>
-                                                    <li>Fusce arcu maecenas</li>
-                                                    <li>Malesuada felis sem elementum</li>
-                                                    <li>Risus eu metus</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrap-fx2">
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="tf-section how-we-work pb-mobie">
         <div class="container">
@@ -353,142 +172,7 @@
         </div>
     </section>
 
-    <!-- <section class="tf-section tf-project style3">
-        <div class="container">
-            <div class="col-md-12">
-                <div class="tf-title m-b60" data-aos="fade-up" data-aos-duration="800">
-                    <p class="h8 sub-title">NFT featured</p>
-                    <h4 class="title m-b17">Arts & collectibles</h4>
-                </div>
-            </div>
-            <div class="swiper-container swiper mySwiper swiper-h">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper mySwiper3 a-w100 swiper-v">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img6.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img10.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img13.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img11.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img7.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img6.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img7.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-container swiper mySwiper swiper-h">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper mySwiper4 a-w100 swiper-v">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img7.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img6.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img5.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img4.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img3.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img2.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img1.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="item.html">
-                                        <div class="img-box">
-                                            <img src="assets/images/common/img5.jpg" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
+   
     <section class="tf-section tf-roadmap">
         <div class="container">
             <div class="row">
@@ -864,7 +548,7 @@
                             <a href="#">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="contact/">Contact Us</a>
                         </li>
                     </ul>
                 </div>

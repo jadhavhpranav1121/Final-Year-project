@@ -332,6 +332,7 @@ h6,
     z-index: 999;
 }
 .header__logo{
+    width: 100px !important;
     a{
         img{
             width:100px;
@@ -2926,7 +2927,7 @@ input[type="color"]::placeholder {
     background-color: transparent;
     @include flex(center,space-between);   
     #site-header-inner {
-        @include flex(center,flex-start);
+        @include flex(center,space-between);
         width: $w100;
         .tf-button {
             margin-left: auto;
@@ -2978,28 +2979,28 @@ input[type="color"]::placeholder {
             transform: translateY(5px);
         }
     }
-    li.menu-item-has-children>a {
-        &::after {
-            @include transition3;
-            position: absolute;
-            font-family: "Font Awesome 5 Pro";
-            content: '\f078';
-            right: 0;
-            top: 50%;
-            font-weight: 400;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%);
-            font-size: 18px;
-            color: $white;
-        }   
+    // li.>a {
+    //     &::after {
+    //         @include transition3;
+    //         position: absolute;
+    //         font-family: "Font Awesome 5 Pro";
+    //         content: '\f078';
+    //         right: 0;
+    //         top: 50%;
+    //         font-weight: 400;
+    //         -webkit-transform: translateY(-50%);
+    //         -ms-transform: translateY(-50%);
+    //         -o-transform: translateY(-50%);
+    //         transform: translateY(-50%);
+    //         font-size: 18px;
+    //         color: $white;
+    //     }   
             
-        &:hover::after,
-        &:hover {
-            color: $color-hover;
-        }
-    }
+    //     &:hover::after,
+    //     &:hover {
+    //         color: $color-hover;
+    //     }
+    // }
 
     li.menu-item.current-menu-item > a {
         color: $color-hover;
@@ -3115,27 +3116,27 @@ input[type="color"]::placeholder {
     color: $color-hover;
     }
 
-    .menu-item-has-children .arrow {
-        @include transition3;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 20px;
-        line-height: 48px;
-        position: absolute;
-        right: 15px;
-        text-align: center;
-        top: 2px;
-        width: 48px;
-    }
-    .menu-item-has-children .arrow:before {
-        font-family: "Font Awesome 5 Pro";
-        content: "\f107";
-        color: $bgr-body;
-    }
+    // . .arrow {
+    //     @include transition3;
+    //     cursor: pointer;
+    //     display: inline-block;
+    //     font-size: 20px;
+    //     line-height: 48px;
+    //     position: absolute;
+    //     right: 15px;
+    //     text-align: center;
+    //     top: 2px;
+    //     width: 48px;
+    // }
+    // . .arrow:before {
+    //     font-family: "Font Awesome 5 Pro";
+    //     content: "\f107";
+    //     color: $bgr-body;
+    // }
 
-    .menu-item-has-children.current-menu-item .arrow:before {
-        color: $color-hover;
-    }
+    // ..current-menu-item .arrow:before {
+    //     color: $color-hover;
+    // }
 }
 
 /* Mobile Menu Button */
@@ -4945,8 +4946,8 @@ input[type="color"]::placeholder {
             background: none;
             .overlay {
                 @include overlay;
-                background: url('./../../static/images/backgroup/bg-4.jpg') center center no-repeat;
-                background-size: cover;
+                background: url('./../../static/images/common/slider1.jpg') center center no-repeat !important;
+                // background-size: cover;
                 box-shadow: 0 40px 4px 0 rgba(0, 0, 0, 0.25);
                 opacity: 0.7;
             }
@@ -6643,7 +6644,7 @@ input[type="color"]::placeholder {
         &.tf-roadmap {
             padding: 80px 0 107px;
             .overlay {
-                background: url('./../../assets/images/backgroup/bg-5.jpg') center center fixed no-repeat;
+                background: url('../images/backgroup/bg-5.jpg') center center fixed no-repeat;
                 background-size: cover;
                 position: absolute;
                 left: 0;

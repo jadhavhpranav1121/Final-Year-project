@@ -68,7 +68,7 @@
   visibility: visible;
   transform: translateY(5px);
 }
-#main-nav .menu li.menu-item-has-children > a::after {
+#main-nav .menu li. > a::after {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -87,7 +87,7 @@
   font-size: 18px;
   color: #fff;
 }
-#main-nav .menu li.menu-item-has-children > a:hover::after, #main-nav .menu li.menu-item-has-children > a:hover {
+#main-nav .menu li. > a:hover::after, #main-nav .menu li. > a:hover {
   color: #14C2A3;
 }
 #main-nav .menu li.menu-item.current-menu-item > a {
@@ -912,7 +912,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("./../../static/images/backgroup/bg-4.jpg") center center no-repeat;
+  
   background-size: cover;
   box-shadow: 0 40px 4px 0 rgba(0, 0, 0, 0.25);
   opacity: 0.7;
@@ -2680,7 +2680,7 @@
 #main-nav-mobi ul > li > a:hover {
   color: #14C2A3;
 }
-#main-nav-mobi .menu-item-has-children .arrow {
+#main-nav-mobi . .arrow {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -2696,12 +2696,12 @@
   top: 2px;
   width: 48px;
 }
-#main-nav-mobi .menu-item-has-children .arrow:before {
+#main-nav-mobi . .arrow:before {
   font-family: "Font Awesome 5 Pro";
   content: "\f107";
   color: #0c1226;
 }
-#main-nav-mobi .menu-item-has-children.current-menu-item .arrow:before {
+#main-nav-mobi ..current-menu-item .arrow:before {
   color: #14C2A3;
 }
 
@@ -4880,7 +4880,7 @@
   padding: 80px 0 107px;
 }
 .home3 .tf-section.tf-roadmap .overlay {
-  background: url("./../../assets/images/backgroup/bg-5.jpg") center center fixed no-repeat;
+  background: url("/images/backgroup/bg-5.jpg") center center fixed no-repeat;
   background-size: cover;
   position: absolute;
   left: 0;
