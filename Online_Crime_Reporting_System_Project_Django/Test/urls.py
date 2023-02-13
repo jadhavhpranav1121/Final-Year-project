@@ -27,7 +27,7 @@ urlpatterns = [
     path('blogdetail/', TemplateView.as_view(template_name='blog-details.html'), name='blog-details'),
     
     path('admin/', admin.site.urls),
-    
+    path('forecast/', TemplateView.as_view(template_name='forecast.html'), name='forecast'),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('complaints/', include(('complaints.urls', 'complaints'), namespace='complaints')),
     re_path('^get_chain$', views.get_chain, name="get_chain"),

@@ -3571,13 +3571,20 @@ input[type="color"]::placeholder {
     .image-details {
         margin-bottom: 30px;
         img {
-            width: 100%;
-        }
+            width: 90%;
+            height:90%;
+        }   
     }
     .contact-details {
         margin-top: 50px;
     }
 
+    .team_photo{
+        width: 80%;
+        height: 80%;
+    }
+    
+      
     .wrap-fx .image-faq img,
     .team-box .image img,
     .roadmap,
